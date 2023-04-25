@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolio Page</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<link rel="stylesheet" href="default.css" />-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" id="theme-style" type="text/css" href="" />
+  </head>
+  <!--Last Updated: 2023.02.24-->
+  <!--加入中文版-->
+  <!--Add Django/Flask backend-->
+  <body>
+    <section class="s1">
+      <div class="main-container">
+        <div class="greet-wrapper">
+          <h1>Hello, I'm Hui Ru Hu</h1>
+        </div>
+
+        <div class="intro-wrapper">
+          <div class="nav-wrapper">
+            <div class="dots-wrapper">
+              <div id="dot-1" class="browser-dot"></div>
+              <div id="dot-2" class="browser-dot"></div>
+              <div id="dot-3" class="browser-dot"></div>
+            </div>
+            <ul id="navigation">
+              <!--url is not working-->
+              <li><a href="/zh">切換至中文頁</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="left-column">
+            <img id="profile-pic" src="{{ url_for('static', filename='images/profile_pic.jpg') }}" />
+            <h5 style="text-align: center; line-height: 0">
+              Personalized Theme
+            </h5>
+            <div id="theme-options-wrapper">
+              <div data-mode="light" id="light-mode" class="theme-dot"></div>
+              <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
+              <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+              <div data-mode="green" id="green-mode" class="theme-dot"></div>
+            </div>
+
+            <p id="settings-note">
+              *Theme settings will be saved for<br />your next visit
+            </p>
+          </div>
+          <div class="right-column">
+            <div id="preview-shadow">
+              <div id="preview">
+                <div id="corner-tl" class="corner"></div>
+                <div id="corner-tr" class="corner"></div>
+                <h3>About Me</h3>
+                <p>I was a potential vet in past life, now I enjoy coding.</p>
+                <div id="corner-bl" class="corner"></div>
+                <div id="corner-br" class="corner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s2">
+      <div class="main-container">
+        <div class="about-wrapper">
+          <div class="about-me">
+            <h4>More about me</h4>
+            <p>
+              
+              I build  to practice my coding skills, and explore more
+              about Computer Science.
+            </p>
+            <p>
+              While I keep busy building projects and improving my skills, I take interviews in search
+              of a great team and projects that interest me.
+            </p>
+
+            <hr />
+
+            <h4>Skills</h4>
+            <!-- TODO: add Resume, add Django Backend, and host the website-->
+            <p>
+              Web developer with primary focus on Python and JavaScript<a
+                target="_blank"
+                href="#"
+              >
+                Download Resume</a
+              >
+            </p>
+
+            <div id="skills">
+              <ul>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>MySQL</li>
+              </ul>
+
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h3>Find me on GitHub and Socials</h3>
+            <a target="_blank" href="https://github.com/Ru960413"
+              >Github: @Ru960413</a
+            >
+            <!-- <a target="_blank" href="https:// instagram.com/rus_coding_journey"
+              >Instagram: @rus_coding_journey</a
+            > 
+            <a target="_blank" href="mailto:huiruhu96@gmail.com"
+              >Gmail: huiruhu96@gmail.com</a
+            >-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODO: add project images and links -->
+    <section class="s1">
+      <div class="main-container">
+        <h3 style="text-align: center">The Projects That I Built</h3>
+        <div class="post-wrapper">
+          <div>
+            <div class="post">
+              <!--<img src="images/default.jpg" class="thumbnail" />-->
+              <img src="{{ url_for('static', filename='images/default.jpg') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">Bankist</h6>
+                <p class="post-intro">
+                  A finance application that provides user with online banking
+                  functionalities and also quoting, buying, selling currencies.
+                  Built with HTML, CSS, JavaScript, Exchange Rate API, Python, and
+                  Django.
+                </p>
+                <p>
+                  <a href="#">Read more on GitHub</a>
+                </p>
+                <p>
+                  <a href="#">Visit my Website</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img src="{{ url_for('static', filename='images/vet_map_en.png') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">24 HR Vet Clinics in Taiwan</h6>
+                <p class="post-intro">
+                  A bilingual site that allows user to get access to the
+                  emergency vet clinics nearby. Built with HTML, CSS,
+                  JavaScript, Google Map API, Python, and Flask.
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/Ru960413/24HR-vet-clinic-route-planner"
+                    >Read more on GitHub</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://24hr-vet-clinic-route-planner-production.up.railway.app/"
+                    >Visit my Website</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img src="{{ url_for('static', filename='images/To Do List Homepage.png') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">
+                  To Do List App with user authentication
+                </h6>
+                <p class="post-intro">
+                  Allow user to create, view, update and delete tasks with user
+                  authentication and password reset features. Built with HTML,
+                  CSS, JavaScript, Python, and Django.
+                </p>
+                <p>
+                  <a href="https://github.com/Ru960413/toDoList"
+                    >Read more on GitHub</a
+                  >
+                </p>
+                <p>
+                  <a href="https://todolist-production-2fac.up.railway.app/"
+                    >Visit my Website</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="post">
+              <img src="{{ url_for('static', filename='images/default.jpg') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">Mapty - Workout Tracker</h6>
+                <p class="post-intro">
+                  A workout tracker built with HTML, CSS, JavaScript, as well as leaflet, and JavaScript's local storage API.
+                </p>
+                <p>
+                  <a href="#"
+                    >Read more on GitHub</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+          <div class="post">
+            <img src="{{ url_for('static', filename='images/default.jpg') }}" class="thumbnail" />
+            <div class="post-preview">
+              <h6 class="post-title">E-commerce site (Pet Shop)</h6>
+              <p class="post-intro">
+                Application for both the customer and the shop owner. Built with
+                HTML, CSS for FrontEnd, and Python, Django for BackEnd.
+              </p>
+              <p><a href="#">Read more on GitHub</a></p>
+              <p><a href="#">Visit my Website</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="post">
+            <img src="{{ url_for('static', filename='images/number_guessing_game.png') }}" class="thumbnail" />
+            <div class="post-preview">
+              <h6 class="post-title">Number Guessing Game</h6>
+              <p class="post-intro">
+                A Python Game built with Python for its logic and Tkinter for
+                its GUI.
+              </p>
+              <p>
+                <a href="https://github.com/Ru960413/number_guessing_game"
+                  >Read more on GitHub</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s2">
+      <div class="main-container">
+        <h3 style="text-align: center">Get In Touch</h3>
+        <form id="contact-form" action="https://formsubmit.co/huiruhu96@gmail.com" method="POST">
+          <label>Name</label>
+          <input class="input-field" type="text" name="name" required/>
+
+          <label>Subject</label>
+          <input class="input-field" type="text" name="subject" required/>
+
+          <label>Email</label>
+          <input class="input-field" type="text" name="Email" required/>
+
+          <label>Message</label>
+          <textarea class="input-field" type="message" name="message" required></textarea>
+
+          <input id="submit-btn" type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolio Page</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" id="theme-style" type="text/css" href="" />
+  </head>
+  <!--Last Updated: 2023.02.24-->
+  <!--加入中文版-->
+  <!--Add Django/Flask backend-->
+  <body>
+    <section class="s1">
+      <div class="main-container">
+        <div class="greet-wrapper">
+          <h1>嗨！我是胡惠如！</h1>
+        </div>
+
+        <div class="intro-wrapper">
+          <div class="nav-wrapper">
+            <div class="dots-wrapper">
+              <div id="dot-1" class="browser-dot"></div>
+              <div id="dot-2" class="browser-dot"></div>
+              <div id="dot-3" class="browser-dot"></div>
+            </div>
+            <ul id="navigation">
+              <li><a href="/">Switch to English Version</a></li>
+              <li><a href="#">聯絡我</a></li>
+            </ul>
+          </div>
+          <div class="left-column">
+            <img id="profile-pic" src="{{ url_for('static', filename='images/profile_pic.jpg') }}" />
+            <h5 style="text-align: center; line-height: 0">
+              個人化主題
+            </h5>
+            <div id="theme-options-wrapper">
+              <div data-mode="light" id="light-mode" class="theme-dot"></div>
+              <div data-mode="dark" id="dark-mode" class="theme-dot"></div>
+              <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+              <div data-mode="green" id="green-mode" class="theme-dot"></div>
+            </div>
+
+            <p id="settings-note">
+              *主題將會保存至<br />您下一次的拜訪
+            </p>
+          </div>
+          <div class="right-column">
+            <div id="preview-shadow">
+              <div id="preview">
+                <div id="corner-tl" class="corner"></div>
+                <div id="corner-tr" class="corner"></div>
+                <h3>About Me</h3>
+                <p>以前的我曾經有著獸醫夢，現在的我享受寫程式的過關斬將和不斷的提升自己</p>
+                <div id="corner-bl" class="corner"></div>
+                <div id="corner-br" class="corner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="s2">
+      <div class="main-container">
+        <div class="about-wrapper">
+          <div class="about-me">
+            <h4>More about me</h4>
+            <p>
+            我喜歡寫各種不同的project來練習我寫程式的技巧，同時學習和探索更多與電腦科學有關知識，在我忙著寫project提升能力的過程中，我也積極地尋覓著好的團隊以及讓我感興趣的project
+            </p>
+
+            <hr />
+
+            <h4>Skills</h4>
+            <p>
+            網頁開發者，主要專注於與Python和JavaScript有關的前、後端技術。
+              <a
+                target="_blank"
+                href="#"
+              >
+                Download Resume</a
+              >
+            </p>
+
+            <div id="skills">
+              <ul>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>SQL</li>
+              </ul>
+
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h3>Find me on GitHub and Socials</h3>
+            <a target="_blank" href="https://github.com/Ru960413"
+              >Github: @Ru960413</a
+            >
+            <!-- <a target="_blank" href="https:// instagram.com/rus_coding_journey"
+              >Instagram: @rus_coding_journey</a
+            > 
+            <a target="_blank" href="mailto:huiruhu96@gmail.com"
+              >Gmail: huiruhu96@gmail.com</a
+            >-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODO: add project images and links -->
+    <section class="s1">
+      <div class="main-container">
+        <h3 style="text-align: center">那些我寫的程式及網頁</h3>
+        <div class="post-wrapper">
+          <div>
+            <div class="post">
+              <!--<img src="images/default.jpg" class="thumbnail" />-->
+              <img src="{{ url_for('static', filename='images/default.jpg') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">Bankist</h6>
+                <p class="post-intro">
+                    Bankist是一個用HTML、CSS、JavaScript、Exchange Rate API、Python以及
+                    Django編寫的Web-based模擬網路銀行，支援使用者存款、貸款、提款以及換匯。
+                </p>
+                <p>
+                  <a href="#">到GitHub上看更多細節</a>
+                </p>
+                <p>
+                  <a href="#">前往網站</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img src="{{ url_for('static', filename='images/vet_map_en.png') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">台灣24小時急診獸醫院地圖</h6>
+                <p class="post-intro">
+                    這是一個雙語（中、英文）的地圖服務網站。
+                    前端部分以Google Map API以及HTML、CSS、
+                    JavaScript編寫，後端部分則運用Python及Flask。
+                    能獲取使用者的資料並在地圖上顯示與之鄰近的、有提供急診服務的獸醫院。
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/Ru960413/24HR-vet-clinic-route-planner"
+                    >到GitHub上看更多細節</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://24hr-vet-clinic-route-planner-production.up.railway.app/"
+                    >前往網站</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="post">
+              <img src="{{ url_for('static', filename='images/To Do List Homepage.png') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">
+                    待辦事項網頁（附使用者驗證功能以及REST API）
+                </h6>
+                <p class="post-intro">
+                    能讓使用者添加、檢視、更新以及刪除待辦事項（CRUD），另外亦有密碼重設的功能，當使用者遞交重設密碼的需求後，系統會寄送重設密碼的信件至使用者的信箱以利密碼重設。
+                </p>
+                <p>
+                  <a href="https://github.com/Ru960413/toDoList"
+                    >到GitHub上看更多細節</a
+                  >
+                </p>
+                <p>
+                  <a href="https://todolist-production-2fac.up.railway.app/"
+                    >前往網站</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="post">
+              <img src="{{ url_for('static', filename='images/default.jpg') }}" class="thumbnail" />
+              <div class="post-preview">
+                <h6 class="post-title">Mapty - 健身紀錄網頁</h6>
+                <p class="post-intro">
+                這是個以HTML、CSS、JavaScript以及leaflet API所編寫而成的健身紀錄網頁，可記錄跑步及騎腳踏車兩項運動，
+                利用JavaScript的local storage API儲存使用者的健身紀錄。
+                </p>
+                <p>
+                  <a href="#"
+                    >到GitHub上看更多細節</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+          <div class="post">
+            <img src="{{ url_for('static', filename='images/default.jpg') }}" class="thumbnail" />
+            <div class="post-preview">
+              <h6 class="post-title">E-commerce site (Pet Shop)</h6>
+              <p class="post-intro">
+                Application for both the customer and the shop owner. Built with
+                HTML, CSS for FrontEnd, and Python, Django for BackEnd.
+              </p>
+              <p><a href="#">到GitHub上看更多細節</a></p>
+              <p><a href="#">前往網站</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="post">
+            <img src="{{ url_for('static', filename='images/number_guessing_game.png') }}" class="thumbnail" />
+            <div class="post-preview">
+              <h6 class="post-title">猜數字遊戲</h6>
+              <p class="post-intro">
+                這是一個用Python編寫遊戲邏輯，並用Python Library Tkinter做為GUI
+                
+              </p>
+              <p>
+                <a href="https://github.com/Ru960413/number_guessing_game"
+                  >到GitHub上看更多細節</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="s2">
+      <div class="main-container">
+        <h3 style="text-align: center">聯絡我</h3>
+        <form id="contact-form" action="https://formsubmit.co/huiruhu96@gmail.com" method="POST">
+          <label>名稱</label>
+          <input class="input-field" type="text" name="name" required/>
+
+          <label>主旨</label>
+          <input class="input-field" type="text" name="subject" required/>
+
+          <label>Email</label>
+          <input class="input-field" type="text" name="Email" required/>
+
+          <label>內容</label>
+          <textarea class="input-field" type="message" name="message" required></textarea>
+
+          <input id="submit-btn" type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+
+    <!--<script src="script.js" type="text/javascript" async defer></script>-->
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>
+
