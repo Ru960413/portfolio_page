@@ -1,3 +1,5 @@
-1. Deploy site
+1. 寫resume，add pdf to html as downloadable link
+
+DONE
+1. Deploy site 
 2. 重新trigger form submit
-3. 寫resume，add pdf to html as downloadable link
