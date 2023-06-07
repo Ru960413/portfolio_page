@@ -1,4 +1,6 @@
 1. 寫resume，add pdf to html as downloadable link
+2. implement lazy loading for image
+3. add RWD for phone
 
 DONE
 1. Deploy site 
