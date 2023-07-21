@@ -1,3 +1,5 @@
+
+/* ISSUE: s1 is overflowing when the screen size is under 800px 🧐 */
 :root {
   --mainColor: #eaeaea;
   --secondaryColor: #fff;
@@ -308,7 +310,7 @@ p {
 
 .post-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 320px);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   justify-content: center;
   padding-bottom: 50px;
@@ -338,8 +340,13 @@ p {
 .thumbnail {
   display: block;
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
+}
+
+.tech {
+  color: navy !important;
+  font-size: 14px;
 }
 
 /*如果螢幕寬度為 1200px 以下，就套用 css 設定*/
