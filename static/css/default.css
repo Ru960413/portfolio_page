@@ -395,7 +395,6 @@ p {
   }
 }
 
-/*如果螢幕寬度為 1200px 以下，就套用 css 設定*/
 @media screen and (max-width: 800px) {
   .intro-wrapper {
     grid-template-columns: 1fr;
